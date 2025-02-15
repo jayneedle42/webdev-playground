@@ -4,7 +4,74 @@
     box-sizing: border-box;
 }
 
+.custom-cursor {
+    width: 50px;
+    height: 50px;
+    background: url('/assets/cursor-default.png') no-repeat center center;
+    background-size: contain;
+    position: fixed; /* Change from absolute to fixed */
+    pointer-events: none;
+    transition: transform 0.1s, width 0.1s, height 0.1s;
+    z-index: 10001; /* Ensure the cursor is always above the overlay */
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Lower z-index to ensure overlay is below the cursor */
+}
+
+.overlay-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%; /* Limit the max-width */
+    max-height: 90%; /* Limit the max-height */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.overlay img {
+    max-width: 80%;  /* Ensure the image doesn't take more than 80% of the container's width */
+    max-height: 80vh; /* Ensure the image doesn't exceed the viewport height */
+    object-fit: contain; /* Scale image properly within the container */
+}
+
+.overlay-caption {
+    margin-left: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 5px;
+    max-width: 300px;
+    word-wrap: break-word;  /* Ensure long text wraps nicely */
+}
+
+.close-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
 body {
+    cursor: none;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -26,6 +93,23 @@ header .logo {
     font-weight: bold;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    color: #ff6347; /* Change to your desired hover color */
+}
+
 header .social-icons a {
     margin-left: 15px;
 }
@@ -40,13 +124,137 @@ header .social-icons img {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
     padding: 10px;
-  }
-  
-  .image-grid img {
+}
+
+.image-grid img {
     max-width: 300px;
     width: 100%;
     height: auto;
     display: block;
     margin: auto;
     object-fit: cover;
-  }
+}
+
+.food-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+.food-card {
+    perspective: 1000px;
+}
+
+.food-card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, height 0.6s;
+}
+
+.food-card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.food-card-front, .food-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.food-card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.food-card-front img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s;
+}
+
+.food-card-front:hover img {
+    animation: shake 0.5s;
+}
+
+.food-card-front .see-recipe-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.food-card-front:hover .see-recipe-btn {
+    display: block;
+}
+
+.food-card-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Patrick Hand', cursive; /* Apply the handwritten font */
+    overflow: auto;
+}
+
+.recipe-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%;
+    border-bottom: 2px solid red;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.ingredients-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ingredients-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid blue;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.recipe-description {
+    margin-top: 15px;
+    font-size: 16px;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+

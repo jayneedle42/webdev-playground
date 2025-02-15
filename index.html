@@ -7,8 +7,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="custom-cursor"></div>
   <header>
-    <div class="logo">NOSTALGIA</div>
+    <div class="logo-container">
+      <a href="index.html" class="logo">ART</a>
+      <a href="food.html" class="logo">FOOD</a>
+      <a href="travel.html" class="logo">TRAVEL</a>
+      <a href="tech.html" class="logo">TECH</a>
+    </div>
     <div class="social-icons">
       <a href="https://www.facebook.com/jaydreadhead" aria-label="Facebook"><img src="/Theme/Icons/fb-icon.png" alt="Facebook"></a>
       <a href="https://instagram.com/thedablab_jay" aria-label="Instagram"><img src="/Theme/Icons/ig-icon.png" alt="Instagram"></a>
@@ -16,29 +22,37 @@
   </header>
   <main>
     <div class="image-grid">
-      <img src="/Home/Images/test.gif" alt="">
-      <img src="/Home/Images/hellokitty-saltgirl.png" alt="Hello Kitty Salt Girl">
-      <img src="/Home/Images/bulma-saltgirl.jpg" alt="Bulma Salt Girl">
-      <img src="/Home/Images/misty-saltgirl.jpg" alt="Misty Salt Girl">
-      <img src="/Home/Images/fivejointstyle.jpg" alt="Sanji Five Joint Style">
-      <img src="/Home/Images/gokusmokesfrieza.jpg" alt="">
-      <img src="/Home/Images/tokemon.jpg" alt="">
-      <img src="/Home/Images/shroomtrip.jpg" alt="">
-      <img src="/Home/Images/trippychicken.jpg" alt="">
-      <img src="/Home/Images/smashingpumpkin.jpg" alt="">
-      <img src="/Home/Images/rosinhead.jpg" alt="">
-      <img src="/Home/Images/pufferfish.jpg" alt="">
-      <img src="/Home/Images/kfc.jpg" alt="">
-      <img src="/Home/Images/tdl-whale.jpg" alt="">
-      <img src="/Home/Images/bardlogo-a.jpg" alt="">
-      <img src="/Home/Images/bardlogo-b.jpg" alt="">
-      <img src="/Home/Images/reignofsour.jpg" alt="">
-      <img src="/Home/Images/grinnerbear-heads.jpg" alt="">
-      <img src="/Home/Images/grinnerbear.jpg" alt="">
-      <img src="/Home/Images/tiedyebear.jpg" alt="">
-      <img src="/Home/Images/himonster.jpg" alt="">
+      <img src="/Home/Images/test.gif" alt="" data-large="/Home/Images/large/test.gif" data-caption="Test GIF">
+      <img src="/Home/Images/hellokitty-saltgirl.png" alt="Hello Kitty Salt Girl" data-large="/Home/Images/hellokitty-saltgirl.png" data-caption="Hello Kitty Salt Girl">
+      <img src="/Home/Images/bulma-saltgirl.jpg" alt="Bulma Salt Girl" data-large="/Home/Images/bulma-saltgirl.jpg" data-caption="Bulma Salt Girl">
+      <img src="/Home/Images/misty-saltgirl.jpg" alt="Misty Salt Girl" data-large="/Home/Images/misty-saltgirl.jpg" data-caption="Misty Salt Girl">
+      <img src="/Home/Images/fivejointstyle.jpg" alt="Sanji Five Joint Style" data-large="/Home/Images/fivejointstyle.jpg" data-caption="Sanji Five Joint Style">
+      <img src="/Home/Images/gokusmokesfrieza.jpg" alt="" data-large="/Home/Images/gokusmokesfrieza.jpg" data-caption="Goku Smokes Frieza">
+      <img src="/Home/Images/tokemon.jpg" alt="" data-large="/Home/Images/tokemon.jpg" data-caption="Tokemon">
+      <img src="/Home/Images/shroomtrip.jpg" alt="" data-large="/Home/Images/shroomtrip.jpg" data-caption="Shroom Trip">
+      <img src="/Home/Images/trippychicken.jpg" alt="" data-large="/Home/Imagestrippychicken.jpg" data-caption="Trippy Chicken">
+      <img src="/Home/Images/smashingpumpkin.jpg" alt="" data-large="/Home/Imagessmashingpumpkin.jpg" data-caption="Smashing Pumpkin">
+      <img src="/Home/Images/rosinhead.jpg" alt="" data-large="/Home/Images/rosinhead.jpg" data-caption="Rosin Head">
+      <img src="/Home/Images/pufferfish.jpg" alt="" data-large="/Home/Images/pufferfish.jpg" data-caption="Puffer Fish">
+      <img src="/Home/Images/kfc.jpg" alt="" data-large="/Home/Images/kfc.jpg" data-caption="KFC">
+      <img src="/Home/Images/tdl-whale.jpg" alt="" data-large="/Home/Images/tdl-whale.jpg" data-caption="TDL Whale">
+      <img src="/Home/Images/bardlogo-a.jpg" alt="" data-large="/Home/Images/bardlogo-a.jpg" data-caption="Bard Logo A">
+      <img src="/Home/Images/bardlogo-b.jpg" alt="" data-large="/Home/Images/bardlogo-b.jpg" data-caption="Bard Logo B">
+      <img src="/Home/Images/reignofsour.jpg" alt="" data-large="/Home/Images/reignofsour.jpg" data-caption="Reign of Sour">
+      <img src="/Home/Images/grinnerbear-heads.jpg" alt="" data-large="/Home/Images/grinnerbear-heads.jpg" data-caption="Grinner Bear Heads">
+      <img src="/Home/Images/grinnerbear.jpg" alt="" data-large="/Home/Images/grinnerbear.jpg" data-caption="Grinner Bear">
+      <img src="/Home/Images/tiedyebear.jpg" alt="" data-large="/Home/Images/tiedyebear.jpg" data-caption="Tie Dye Bear">
+      <img src="/Home/Images/himonster.jpg" alt="" data-large="/Home/Images/himonster.jpg" data-caption="Hi Monster">
       <!-- Add more images as needed -->
     </div>
   </main>
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <img id="overlay-image" src="" alt="">
+      <div id="overlay-caption" class="overlay-caption"></div>
+      <button id="close-overlay" class="close-overlay">X</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
