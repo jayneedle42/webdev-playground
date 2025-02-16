@@ -11,8 +11,12 @@
     background-size: contain;
     position: fixed; /* Change from absolute to fixed */
     pointer-events: none;
-    transition: transform 0.1s, width 0.1s, height 0.1s;
+    transition: transform 0.1s, width 0.1s, height 0.1s, background 0s; /* Add background transition */
     z-index: 10001; /* Ensure the cursor is always above the overlay */
+}
+
+.custom-cursor:hover {
+    transition-delay: 1s; /* Delay the hover effect */
 }
 
 .overlay {
@@ -30,43 +34,44 @@
 
 .overlay-content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90%; /* Limit the max-width */
-    max-height: 90%; /* Limit the max-height */
+    max-width: 95%; /* Limit the max-width */
+    max-height: 95%; /* Limit the max-height */
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .overlay img {
-    max-width: 80%;  /* Ensure the image doesn't take more than 80% of the container's width */
+    max-width: 100%;  /* Ensure the image doesn't take more than 100% of the container's width */
     max-height: 80vh; /* Ensure the image doesn't exceed the viewport height */
     object-fit: contain; /* Scale image properly within the container */
 }
 
 .overlay-caption {
-    margin-left: 20px;
+    margin-top: 10px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.8);
     color: #333;
     border-radius: 5px;
     max-width: 300px;
     word-wrap: break-word;  /* Ensure long text wraps nicely */
+    text-align: center;
 }
 
 .close-overlay {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
     background: #ff6347;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 3px 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 5px;
 }
 
@@ -74,6 +79,8 @@ body {
     cursor: none;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -86,28 +93,32 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.logo-container {
+header .logo-container {
     display: flex;
     align-items: center;
 }
 
-.logo {
+header .logo {
     margin-right: 20px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #fff;
     font-size: 24px;
     transition: color 0.3s;
+    padding: 0 5px; /* Add padding between links */
+    font-weight: bold;
 }
 
-.logo:hover {
+header .logo:hover {
     color: #ff6347; /* Change to your desired hover color */
+    }
+
+header .social-icons {
+    display: flex;
+    align-items: center;
 }
 
 header .social-icons a {
@@ -121,18 +132,24 @@ header .social-icons img {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted min-width for desktop */
     gap: 10px;
     padding: 10px;
 }
 
 .image-grid img {
-    max-width: 300px;
+    max-width: 100%;
     width: 100%;
     height: auto;
     display: block;
     margin: auto;
     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted min-width for mobile */
+  }
 }
 
 .food-image-grid {
@@ -151,7 +168,7 @@ header .social-icons img {
     width: 100%;
     height: 300px;
     transform-style: preserve-3d;
-    transition: transform 0.6s, height 0.6s;
+    transition: transform 0.6s;
 }
 
 .food-card-inner.is-flipped {
@@ -173,6 +190,7 @@ header .social-icons img {
     align-items: center;
     flex-direction: column;
     position: relative;
+    z-index: 2; /* Ensure front side is above the back side */
 }
 
 .food-card-front img {
@@ -183,6 +201,7 @@ header .social-icons img {
 
 .food-card-front:hover img {
     animation: shake 0.5s;
+    animation-iteration-count: 1;
 }
 
 .food-card-front .see-recipe-btn {
@@ -197,10 +216,16 @@ header .social-icons img {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .food-card-front:hover .see-recipe-btn {
     display: block;
+}
+
+.food-card-front .see-recipe-btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .food-card-back {
@@ -214,6 +239,7 @@ header .social-icons img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Patrick Hand', cursive; /* Apply the handwritten font */
     overflow: auto;
+    z-index: 1; /* Ensure back side is below the front side */
 }
 
 .recipe-title {
@@ -244,6 +270,49 @@ header .social-icons img {
     margin-top: 15px;
     font-size: 16px;
 }
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .logo {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  header .social-icons {
+    justify-content: flex-start;
+  }
+
+  .overlay-content {
+    max-width: 95%;
+    max-height: 95%;
+    padding: 10px;
+  }
+
+  .close-overlay {
+    top: 5px;
+    right: 5px;
+    padding: 3px 6px;
+    font-size: 14px;
+  }
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333; /* Optional: Add a background color to the footer */
+}
+
+.footer-image {
+  max-width: 100%;
+  height: auto;
+}
+
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -256,5 +325,9 @@ header .social-icons img {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.disable-hover * {
+    pointer-events: none !important;
 }
 

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top = `${e.clientY}px`;
-    cursor.style.transform = 'scale(0.8)';
+    cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
   });
 
   document.addEventListener('mouseleave', () => {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.image-grid img').forEach(img => {
     img.addEventListener('click', () => {
-      overlayImage.src = img.getAttribute('data-large'); // Display the large image
+      overlayImage.src = img.src; // Use the same src for the large image
       overlayCaption.textContent = img.getAttribute('data-caption'); // Display caption
       overlay.style.display = 'flex'; // Show overlay
 
@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.food-card').forEach(card => {
     console.log('Adding click event to food-card');
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent event bubbling
       console.log('food-card clicked');
       const cardInner = card.querySelector('.food-card-inner');
       cardInner.classList.toggle('is-flipped');
@@ -92,5 +93,26 @@ document.addEventListener('DOMContentLoaded', () => {
         cardInner.style.height = '300px';
       }
     });
+  });
+
+  // Intersection Observer for lazy loading GIFs
+  const lazyGIFs = document.querySelectorAll('img[data-src]');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        console.log(`Image ${img.getAttribute('data-src')} is in view`);
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+        observer.unobserve(img);
+      } else {
+        console.log(`Image ${img.getAttribute('data-src')} is out of view`);
+      }
+    });
+  }, { passive: true });
+
+  lazyGIFs.forEach(img => {
+    console.log(`Observing image ${img.getAttribute('data-src')}`);
+    observer.observe(img);
   });
 });
