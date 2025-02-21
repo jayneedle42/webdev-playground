@@ -9,14 +9,14 @@
     height: 50px;
     background: url('/assets/cursor-default.png') no-repeat center center;
     background-size: contain;
-    position: fixed; /* Change from absolute to fixed */
+    position: fixed; /* Fixed positioning for the cursor */
     pointer-events: none;
     transition: transform 0.1s, width 0.1s, height 0.1s, background 0s; /* Add background transition */
     z-index: 10001; /* Ensure the cursor is always above the overlay */
 }
 
 .custom-cursor:hover {
-    transition-delay: 1s; /* Delay the hover effect */
+    transition-delay: 1s; /* Delay hover effect */
 }
 
 .overlay {
@@ -37,18 +37,27 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 95%; /* Limit the max-width */
-    max-height: 95%; /* Limit the max-height */
+    max-width: 95%;
+    max-height: 95%;
     background: white;
     padding: 10px;
     border-radius: 10px;
-    overflow: hidden; /* Ensure content doesn't overflow */
+    overflow: hidden;
 }
 
-.overlay img {
-    max-width: 100%;  /* Ensure the image doesn't take more than 100% of the container's width */
-    max-height: 80vh; /* Ensure the image doesn't exceed the viewport height */
-    object-fit: contain; /* Scale image properly within the container */
+.overlay-image-wrapper {
+    padding-top: 20px; /* Add padding above the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
 }
 
 .overlay-caption {
@@ -97,12 +106,13 @@ header {
     box-sizing: border-box;
 }
 
-header .logo-container {
+header .navigation-container {
     display: flex;
     align-items: center;
+    background-color: #333;
 }
 
-header .logo {
+header .navigation {
     margin-right: 20px;
     text-decoration: none;
     color: #fff;
@@ -112,9 +122,9 @@ header .logo {
     font-weight: bold;
 }
 
-header .logo:hover {
+header .navigation:hover {
     color: #ff6347; /* Change to your desired hover color */
-    }
+}
 
 header .social-icons {
     display: flex;
@@ -271,7 +281,6 @@ header .social-icons img {
     font-size: 16px;
 }
 
-/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -331,3 +340,76 @@ footer {
     pointer-events: none !important;
 }
 
+/* Navigation Container */
+.navigation-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+/* Navigation Links */
+.navigation {
+    display: inline-block;
+    width: 50px; /* Set a consistent width for the icons */
+    height: 50px; /* Set a consistent height for the icons */
+    text-align: center;
+    line-height: 50px; /* Center the icons vertically */
+}
+
+.navigation img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Social Button Container */
+.social-button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+/* Social Button */
+.social-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f8f8f8;
+    border: 3px solid #000000;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-button img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-button:hover .social-icons {
+    display: flex;
+}
+
+/* Social Links */
+.social-icons a {
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}

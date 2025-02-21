@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlayImage = document.getElementById('overlay-image');
   const overlayCaption = document.getElementById('overlay-caption');
   const closeOverlayButton = document.getElementById('close-overlay');
+  const socialButton = document.getElementById('social-button');
+  const socialIcons = document.getElementById('social-icons');
 
   document.addEventListener('mousemove', (e) => {
     cursor.style.left = `${e.clientX}px`;
@@ -115,4 +117,45 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(`Observing image ${img.getAttribute('data-src')}`);
     observer.observe(img);
   });
+
+  // Social Button Click Event
+  socialButton.addEventListener('click', () => {
+    socialButton.classList.toggle('active');
+    if (socialButton.classList.contains('active')) {
+      socialIcons.style.display = 'flex';
+      socialIcons.style.animation = 'slideIn 0.5s forwards';
+    } else {
+      socialIcons.style.animation = 'slideOut 0.5s forwards';
+      setTimeout(() => {
+        socialIcons.style.display = 'none';
+      }, 500);
+    }
+  });
 });
+
+// CSS Animations for sliding effect
+const style = document.createElement('style');
+style.innerHTML = `
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+`;
+document.head.appendChild(style);
