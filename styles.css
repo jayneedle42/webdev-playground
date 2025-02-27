@@ -90,6 +90,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 header {
@@ -104,6 +105,7 @@ header {
     z-index: 1000;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden; /* Ensure header content stays within bounds */
 }
 
 header .navigation-container {
@@ -113,7 +115,8 @@ header .navigation-container {
 }
 
 header .navigation {
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
     text-decoration: none;
     color: #fff;
     font-size: 24px;
@@ -145,6 +148,8 @@ header .social-icons img {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted min-width for desktop */
     gap: 10px;
     padding: 10px;
+    max-width: 100%; /* Ensure grid stays within viewport */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .image-grid img {
@@ -284,7 +289,7 @@ header .social-icons img {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   header .logo {
@@ -308,6 +313,31 @@ header .social-icons img {
     padding: 3px 6px;
     font-size: 14px;
   }
+
+  .navigation-container {
+    justify-content: center; /* Center navigation icons on mobile */
+  }
+
+  header .navigation-container {
+    justify-content: center; /* Center navigation icons on mobile */
+  }
+}
+
+@media (max-width: 380px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 10px; /* Reduce padding for smaller screens */
+    }
+
+    header .navigation {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        padding: 0 2px; /* Reduce padding between links */
+    }
+
+    header .social-icons {
+        justify-content: flex-start;
+    }
 }
 
 footer {
@@ -363,6 +393,20 @@ footer {
     max-height: 100%;
     display: block;
     margin: 0 auto;
+}
+
+
+@media (max-width: 350px) {
+    .navigation {
+        width: 40px; /* Adjust width for even smaller screens */
+        height: 40px; /* Adjust height for even smaller screens */
+        line-height: 40px; /* Center the icons vertically */
+    }
+
+    .navigation img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 /* Social Button Container */
