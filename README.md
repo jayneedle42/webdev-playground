@@ -1,12 +1,13 @@
-I am building a personal website to practice HTML, CSS, and Javascript. Currently it only features a home page of my illustration portfolio. More coming soon!
+I am building a website to practice HTML, CSS, and Javascript. This website is always a work in progress. I use this repository to test features and implement new ideas.
 
 ## Current Features
-- Responsive to adjust from mobile to dekstop
+- Responsive - Adjusts seamlessly from mobile to desktop
 - Sticky Header
 - Unique Icon Menu
 - Photo Grid
 - Photo Zoom Overlay
 - Social Media Sticky
+- Hover and Flip Card Animation
 - Custom "Bang" Revolver Cursor (Because it's fun!)
 
 **PLEASE NOTE THIS IS A WORK IN PROGRESS**
