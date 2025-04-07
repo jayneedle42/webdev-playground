@@ -13,3 +13,5 @@ I am building a website to practice HTML, CSS, and Javascript. This website is a
 - Custom "Bang" Revolver Cursor (Because it's fun!)
 
 **PLEASE NOTE THIS IS A WORK IN PROGRESS**
+
+More updates coming soon....
