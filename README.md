@@ -11,6 +11,7 @@ I am building a website to practice HTML, CSS, and Javascript. This website is a
 - Social Media Sticky
 - Hover and Flip Card Animation
 - Custom "Bang" Revolver Cursor (Because it's fun!)
+- Pixel Art Canvas Web App
 
 **PLEASE NOTE THIS IS A WORK IN PROGRESS**
 
