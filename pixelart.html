@@ -4,70 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Art Canvas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-        }
-
-        #canvas {
-            display: grid;
-            grid-template-columns: repeat(30, 1fr); /* default 30px blocks */
-            grid-template-rows: repeat(30, 1fr); /* default 30px blocks */
-            width: 380px;
-            height: 380px;
-            border: 1px solid #000;
-            margin-bottom: 20px;
-        }
-
-        .pixel {
-            width: 100%;
-            height: 100%;
-            border: 1px solid #ccc;
-            background-color: white;
-            box-sizing: border-box;
-        }
-
-        .pixel:hover {
-            cursor: pointer;
-        }
-
-        #colorPicker {
-            margin-bottom: 10px;
-        }
-
-        #resetButton {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        #resetButton:hover {
-            background-color: #45a049;
-        }
-
-        /* Slider container styles */
-        #sliderContainer {
-            margin-top: 10px;
-        }
-
-        #pixelSizeLabel {
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-
-        #slider {
-            width: 200px;
-        }
-    </style>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
+
+<div class="custom-cursor"></div>
+  <header>
+    <div class="banner">
+      <p>LOGO HERE</p>
+    </div>
+    <div class="navigation-container">
+      <a href="index.html" class="navigation"><img src="/assets/art-icon.svg"></a>
+      <a href="food.html" class="navigation"><img src="/assets/food-icon.svg"></a>
+      <a href="pixelart.html" class="navigation"><img src="/assets/paint-icon.svg"></a>
+      <a href="#" class="navigation"><img src="/assets/travel-icon.svg"></a>
+      <a href="#" class="navigation"><img src="/assets/tech-icon.svg"></a>
+    </div>
+  </header>
+    
+<div class="pixel-body">
 
     <!-- Color picker input -->
     <input type="color" id="colorPicker" value="#000000">
@@ -79,74 +36,21 @@
     <div id="sliderContainer">
         <label id="pixelSizeLabel" for="slider">Adjust Pixel Size: 30x30</label>
         <input type="range" id="slider" min="5" max="50" value="30">
-    
     </div>
     <p><b>*SLIDER RESETS CANVAS / CHANGES PIXEL SIZE</b></p>
-    <script>
-        // Default grid size (30x30)
-        const defaultSize = 30;
-        const canvas = document.getElementById('canvas');
-        const colorPicker = document.getElementById('colorPicker');
-        const slider = document.getElementById('slider');
-        const pixelSizeLabel = document.getElementById('pixelSizeLabel');
+    
+    <!-- Link the external JavaScript file -->
+    <script src="./pixelart.js"></script>
+</div>
 
-        // Variable to store selected color
-        let selectedColor = colorPicker.value;
-
-        // Flag to track if the mouse is being held down
-        let isMouseDown = false;
-
-        // Function to create the grid
-        function createCanvasGrid(size) {
-            canvas.innerHTML = ''; // Clear previous grid
-            canvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
-            canvas.style.gridTemplateRows = `repeat(${size}, 1fr)`;
-
-            for (let i = 0; i < size * size; i++) {
-                const pixel = document.createElement('div');
-                pixel.classList.add('pixel');
-                pixel.addEventListener('click', function () {
-                    pixel.style.backgroundColor = selectedColor; // Color the pixel with the selected color
-                });
-                pixel.addEventListener('mouseover', function () {
-                    if (isMouseDown) {
-                        pixel.style.backgroundColor = selectedColor; // Color the pixel if mouse is held down
-                    }
-                });
-                canvas.appendChild(pixel);
-            }
-        }
-
-        // Initialize the grid with default size
-        createCanvasGrid(defaultSize);
-
-        // Event listener for the slider to resize canvas
-        slider.addEventListener('input', function () {
-            let newSize = slider.value;
-            pixelSizeLabel.textContent = `Grid Size: ${newSize}x${newSize}`;
-            createCanvasGrid(newSize);
-        });
-
-        // Event listener for the color picker input
-        colorPicker.addEventListener('input', function () {
-            selectedColor = colorPicker.value; // Update the selected color whenever the color picker changes
-        });
-
-        // Event listeners to track mouse down and up for coloring
-        canvas.addEventListener('mousedown', function () {
-            isMouseDown = true;
-        });
-
-        canvas.addEventListener('mouseup', function () {
-            isMouseDown = false;
-        });
-
-        // Optional: Add mouseleave to stop coloring if the mouse leaves the canvas
-        canvas.addEventListener('mouseleave', function () {
-            isMouseDown = false;
-        });
-
-    </script>
+<div class="social-button-container">
+    <button id="social-button" class="social-button"><img src="/assets/social-icon.svg" alt="Social Icon"></button>
+    <div id="social-icons" class="social-icons">
+      <a href="https://github.com/jayneedle42" aria-label="GitHub"><img src="/assets/git-icon.svg" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/jason-needleman-536a2515b/" aria-label="Linkedin"><img src="/assets/linkedin-icon.svg" alt="Linkedin"></a>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
 
 </body>
 </html>

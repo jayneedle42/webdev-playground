@@ -439,12 +439,12 @@ footer {
 /* Social Icons */
 .social-icons {
     display: none;
-    flex-direction: row;
-    gap: 10px;
+    transition: opacity 0.3s ease;
 }
 
-.social-button:hover .social-icons {
+.social-icons.visible {
     display: flex;
+    opacity: 1;
 }
 
 /* Social Links */
@@ -456,4 +456,78 @@ footer {
 .social-icons img {
     width: 50px;
     height: 50px;
+}
+
+/* Pixel Art Canvas Body Styling */
+.pixel-body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/* Canvas grid styling for mobile (default) */
+#canvas {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr); /* default 30px blocks */
+    grid-template-rows: repeat(30, 1fr); /* default 30px blocks */
+    width: 380px;
+    height: 380px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+/* Individual pixel styling */
+.pixel {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.pixel:hover {
+    cursor: pointer;
+}
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+    #canvas {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+/* Color picker styling */
+#colorPicker {
+    margin-bottom: 10px;
+}
+
+/* Reset button styling */
+#resetButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#resetButton:hover {
+    background-color: #45a049;
+}
+
+/* Slider container styling */
+#sliderContainer {
+    margin-top: 10px;
+}
+
+#pixelSizeLabel {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#slider {
+    width: 200px;
 }
