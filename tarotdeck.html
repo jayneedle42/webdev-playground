@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Card Deck</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Include the shared stylesheet -->
+
+  <style>
+    .test {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 30px;
+    }
+
+    #shuffle-btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background-color: #333;
+      color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      transition: background-color 0.3s;
+    }
+
+    #shuffle-btn:hover {
+      background-color: #555;
+    }
+
+    #deck-img {
+      width: 120px;
+      margin: 20px auto;
+      display: block;
+      transition: transform 0.6s ease-in-out;
+      transform-style: preserve-3d;
+    }
+
+    .rotate-y {
+      transform: rotateY(360deg);
+    }
+
+    .card-info {
+  display: inline-block;
+  background: white;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px; /* Set the max width to 300px */
+  width: 100%; /* Ensures it can shrink within the max-width */
+  box-sizing: border-box; /* Makes sure padding and border are included in the width calculation */
+}
+
+    .card-image {
+      width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .upside-down {
+      transform: rotate(180deg);
+    }
+
+    #card-area {
+  display: flex;
+  flex-direction: row; /* Cards will appear from left to right */
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center; /* Center the cards vertically */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  gap: 10px; /* Adds space between cards */
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="banner">
+        <p>LOGO HERE</p>
+    </div>
+    <div class="navigation-container">
+        <a href="index.html" class="navigation"><img src="/assets/art-icon.svg" alt="Art"></a>
+        <a href="food.html" class="navigation"><img src="/assets/food-icon.svg" alt="Food"></a>
+        <a href="pixelart.html" class="navigation"><img src="/assets/paint-icon.svg" alt="Pixel Art"></a>
+        <a href="travel.html" class="navigation"><img src="/assets/travel-icon.svg" alt="Travel"></a>
+        <a href="tech.html" class="navigation"><img src="/assets/tech-icon.svg" alt="Tech"></a>
+    </div>
+</header>
+<div class="test">
+  <h1>Classic Tarot Reading</h1>
+  <p><b>Instructions:</b> Shuffle the cards. Then draw 3 cards.</p>
+  <button id="shuffle-btn">SHUFFLE CARDS</button>
+
+  <img id="deck-img" src="Original Deck/deck.jpg" alt="Deck of cards">
+
+  <div id="card-area"></div>
+
+  <p><i>"One Piece" Theme Tarot Deck COMING SOON!</i></p>
+</div>
+
+  <script>
+    const shuffleButton = document.getElementById('shuffle-btn');
+    const cardArea = document.getElementById('card-area');
+    const deckImg = document.getElementById('deck-img');
+
+    let fullDeck = [];
+    let workingDeck = [];
+    let drawnCards = [];
+
+    // Fetch the deck data from the JSON file
+    async function loadDeckData() {
+      try {
+        const response = await fetch('tarotdeck.json'); // Make sure the JSON file is in the right location
+        const data = await response.json();
+        fullDeck = data; // Load the data into the fullDeck array
+      } catch (error) {
+        console.error('Error loading deck data:', error);
+      }
+    }
+
+    // Function to shuffle the deck
+    function shuffleDeck() {
+      workingDeck = [...fullDeck];
+      for (let i = workingDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [workingDeck[i], workingDeck[j]] = [workingDeck[j], workingDeck[i]];
+      }
+    }
+
+    // Function to get random cards
+    function getRandomCards() {
+      shuffleDeck();
+      drawnCards = [];
+      for (let i = 0; i < 3; i++) {
+        const card = workingDeck.pop(); // Pull from end of shuffled deck
+        drawnCards.push({ ...card, orientation: Math.random() < 0.5 ? 'UP' : 'DOWN' });
+      }
+    }
+
+    // Function to draw a card
+    function drawCard(cardIndex) {
+  const card = drawnCards[cardIndex];
+  const cardDiv = document.createElement('div');
+  cardDiv.classList.add('card-info');
+
+  const cardImg = document.createElement('img');
+  cardImg.src = card.image;
+  cardImg.alt = card.name;
+  cardImg.classList.add('card-image');
+  if (card.orientation === 'DOWN') {
+    cardImg.classList.add('upside-down');
+  }
+
+  const cardName = document.createElement('p');
+cardName.textContent = `Card Name: ${card.name}`;
+
+const cardMeaning = document.createElement('p');
+// Display the appropriate meaning based on card orientation
+cardMeaning.textContent = `Meaning: ${card.orientation === 'UP' ? card.uprightMeaning : card.reverseMeaning}`;
+
+cardDiv.appendChild(cardImg);
+cardDiv.appendChild(cardName);
+cardDiv.appendChild(cardMeaning);
+
+  // Insert the new card before the last one (left side)
+  cardArea.insertBefore(cardDiv, cardArea.firstChild);
+}
+
+    // Function to reset the game
+    function resetGame() {
+      cardArea.innerHTML = '';
+      shuffleButton.textContent = 'SHUFFLE CARDS';
+    }
+
+    shuffleButton.addEventListener('click', () => {
+      if (shuffleButton.textContent === 'SHUFFLE CARDS') {
+        // Spin animation
+        deckImg.classList.add('rotate-y');
+        setTimeout(() => deckImg.classList.remove('rotate-y'), 600);
+
+        getRandomCards();
+        resetGame();
+        shuffleButton.textContent = 'DRAW A CARD';
+
+      } else if (shuffleButton.textContent === 'DRAW A CARD') {
+        drawCard(0);
+        shuffleButton.textContent = 'DRAW A CARD 2';
+
+      } else if (shuffleButton.textContent === 'DRAW A CARD 2') {
+        drawCard(1);
+        shuffleButton.textContent = 'DRAW A CARD 3';
+
+      } else if (shuffleButton.textContent === 'DRAW A CARD 3') {
+        drawCard(2);
+        shuffleButton.textContent = 'SHUFFLE DECK';
+
+      } else if (shuffleButton.textContent === 'SHUFFLE DECK') {
+        resetGame();
+      }
+    });
+
+    // Load the deck data when the page loads
+    loadDeckData();
+  </script>
+
+<div class="social-button-container">
+  <button id="social-button" class="social-button"><img src="/assets/social-icon.svg" alt="Social Icon"></button>
+  <div id="social-icons" class="social-icons">
+    <a href="https://github.com/jayneedle42" aria-label="GitHub"><img src="/assets/git-icon.svg" alt="GitHub"></a>
+    <a href="https://www.linkedin.com/in/jason-needleman-536a2515b/" aria-label="Linkedin"><img src="/assets/linkedin-icon.svg" alt="Linkedin"></a>
+  </div>
+</div>
+<script src="scripts.js"></script> 
+</body>
+</html>

@@ -1,0 +1,477 @@
+[
+        {
+          "image": "Original Deck/0-the-Fool.jpg",
+          "name": "The Fool",
+          "uprightMeaning": "New beginnings, spontaneity, innocence",
+          "reverseMeaning": "Naivety, foolishness, recklessness"
+        },
+        {
+          "image": "Original Deck/1-the-magician.jpg",
+          "name": "The Magician",
+          "uprightMeaning": "Manifestation, power, resourcefulness",
+          "reverseMeaning": "Deception, illusion, poor planning"
+        },
+        {
+          "image": "Original Deck/2-the-high-priestess.jpg",
+          "name": "The High Priestess",
+          "uprightMeaning": "Intuition, divine feminine, mystery",
+          "reverseMeaning": "Secrets, hidden agendas, disconnected from intuition"
+        },
+        {
+          "image": "Original Deck/3-the-empress.jpg",
+          "name": "The Empress",
+          "uprightMeaning": "Fertility, nurturing, beauty",
+          "reverseMeaning": "Neglect, lack of growth, smothering"
+        },
+        {
+          "image": "Original Deck/4-the-emperor.jpg",
+          "name": "The Emperor",
+          "uprightMeaning": "Authority, structure, stability",
+          "reverseMeaning": "Abuse of power, rigidity, lack of control"
+        },
+        {
+          "image": "Original Deck/5-the-heirophant.jpg",
+          "name": "The Hierophant",
+          "uprightMeaning": "Tradition, spirituality, guidance",
+          "reverseMeaning": "Rebellion, breaking norms, isolation"
+        },
+        {
+          "image": "Original Deck/6-the-lovers.jpg",
+          "name": "The Lovers",
+          "uprightMeaning": "Love, harmony, relationships",
+          "reverseMeaning": "Disharmony, imbalance, indecision"
+        },
+        {
+          "image": "Original Deck/7-the-chariot.jpg",
+          "name": "The Chariot",
+          "uprightMeaning": "Determination, control, victory",
+          "reverseMeaning": "Lack of direction, lack of control, aggression"
+        },
+        {
+          "image": "Original Deck/8-strength.jpg",
+          "name": "Strength",
+          "uprightMeaning": "Courage, inner strength, compassion",
+          "reverseMeaning": "Weakness, self-doubt, lack of courage"
+        },
+        {
+          "image": "Original Deck/9-the-hermit.jpg",
+          "name": "The Hermit",
+          "uprightMeaning": "Introspection, solitude, wisdom",
+          "reverseMeaning": "Isolation, loneliness, rejection of wisdom"
+        },
+        {
+          "image": "Original Deck/10-wheel-of-fortune.jpg",
+          "name": "Wheel of Fortune",
+          "uprightMeaning": "Change, cycles, fate",
+          "reverseMeaning": "Bad luck, resistance to change, misfortune"
+        },
+        {
+          "image": "Original Deck/11-justice.jpg",
+          "name": "Justice",
+          "uprightMeaning": "Fairness, truth, law",
+          "reverseMeaning": "Injustice, imbalance, dishonesty"
+        },
+        {
+          "image": "Original Deck/12-the-hanged-man.jpg",
+          "name": "The Hanged Man",
+          "uprightMeaning": "Letting go, new perspective, suspension",
+          "reverseMeaning": "Stagnation, selfishness, avoiding necessary change"
+        },
+        {
+          "image": "Original Deck/13-death.jpg",
+          "name": "Death",
+          "uprightMeaning": "Endings, transformation, transition",
+          "reverseMeaning": "Resistance to change, stagnation, fear of the unknown"
+        },
+        {
+          "image": "Original Deck/14-temperance.jpg",
+          "name": "Temperance",
+          "uprightMeaning": "Balance, moderation, purpose",
+          "reverseMeaning": "Excess, imbalance, lack of purpose"
+        },
+        {
+          "image": "Original Deck/15-the-devil.jpg",
+          "name": "The Devil",
+          "uprightMeaning": "Addiction, materialism, bondage",
+          "reverseMeaning": "Freedom, release from addiction, breaking free"
+        },
+        {
+          "image": "Original Deck/16-the-tower.jpg",
+          "name": "The Tower",
+          "uprightMeaning": "Sudden upheaval, chaos, revelation",
+          "reverseMeaning": "Avoiding disaster, delaying inevitable change"
+        },
+        {
+          "image": "Original Deck/17-the-star.jpg",
+          "name": "The Star",
+          "uprightMeaning": "Hope, inspiration, healing",
+          "reverseMeaning": "Disillusionment, despair, lack of faith"
+        },
+        {
+          "image": "Original Deck/18-the-moon.jpg",
+          "name": "The Moon",
+          "uprightMeaning": "Illusion, fear, subconscious",
+          "reverseMeaning": "Clarity, reality, overcoming fear"
+        },
+        {
+          "image": "Original Deck/19-the-sun.jpg",
+          "name": "The Sun",
+          "uprightMeaning": "Joy, success, vitality",
+          "reverseMeaning": "Lack of success, pessimism, delays"
+        },
+        {
+          "image": "Original Deck/20-judgement.jpg",
+          "name": "Judgement",
+          "uprightMeaning": "Rebirth, inner calling, reckoning",
+          "reverseMeaning": "Avoidance, fear of change, denial"
+        },
+        {
+          "image": "Original Deck/21-the-world.jpg",
+          "name": "The World",
+          "uprightMeaning": "Completion, wholeness, accomplishment",
+          "reverseMeaning": "Incomplete, lack of fulfillment, unfinished business"
+        },
+
+
+            {
+              "image": "Original Deck/Ace-of-wands.jpg",
+              "name": "Ace of Wands",
+              "uprightMeaning": "Inspiration, new opportunities, growth",
+              "reverseMeaning": "Lack of direction, missed opportunities, delays"
+            },
+            {
+              "image": "Original Deck/Two-of-wands.jpg",
+              "name": "Two of Wands",
+              "uprightMeaning": "Planning, progress, decisions",
+              "reverseMeaning": "Indecision, obstacles, lack of progress"
+            },
+            {
+              "image": "Original Deck/Three-of-wands.jpg",
+              "name": "Three of Wands",
+              "uprightMeaning": "Expansion, foresight, confidence",
+              "reverseMeaning": "Lack of planning, fear of expansion, missed opportunities"
+            },
+            {
+              "image": "Original Deck/Four-of-wands.jpg",
+              "name": "Four of Wands",
+              "uprightMeaning": "Celebration, harmony, home",
+              "reverseMeaning": "Instability, lack of celebration, broken harmony"
+            },
+            {
+              "image": "Original Deck/Five-of-wands.jpg",
+              "name": "Five of Wands",
+              "uprightMeaning": "Conflict, competition, tension",
+              "reverseMeaning": "Avoidance of conflict, tension in relationships"
+            },
+            {
+              "image": "Original Deck/Six-of-wands.jpg",
+              "name": "Six of Wands",
+              "uprightMeaning": "Victory, recognition, success",
+              "reverseMeaning": "Failure, lack of recognition, defeat"
+            },
+            {
+              "image": "Original Deck/Seven-of-wands.jpg",
+              "name": "Seven of Wands",
+              "uprightMeaning": "Challenge, defense, perseverance",
+              "reverseMeaning": "Giving up, overwhelmed, vulnerability"
+            },
+            {
+              "image": "Original Deck/Eight-of-wands.jpg",
+              "name": "Eight of Wands",
+              "uprightMeaning": "Speed, progress, movement",
+              "reverseMeaning": "Delays, lack of progress, stagnation"
+            },
+            {
+              "image": "Original Deck/Nine-of-wands.jpg",
+              "name": "Nine of Wands",
+              "uprightMeaning": "Resilience, persistence, strength",
+              "reverseMeaning": "Exhaustion, burnout, lack of resilience"
+            },
+            {
+              "image": "Original Deck/Ten-of-wands.jpg",
+              "name": "Ten of Wands",
+              "uprightMeaning": "Burden, responsibility, hard work",
+              "reverseMeaning": "Release of burden, delegating responsibility, burnout"
+            },
+            {
+              "image": "Original Deck/Page-of-wands.jpg",
+              "name": "Page of Wands",
+              "uprightMeaning": "Exploration, enthusiasm, discovery",
+              "reverseMeaning": "Lack of direction, missed opportunities, pessimism"
+            },
+            {
+              "image": "Original Deck/Knight-of-wands.jpg",
+              "name": "Knight of Wands",
+              "uprightMeaning": "Energy, passion, adventure",
+              "reverseMeaning": "Impulsiveness, recklessness, lack of commitment"
+            },
+            {
+              "image": "Original Deck/Queen-of-wands.jpg",
+              "name": "Queen of Wands",
+              "uprightMeaning": "Courage, independence, warmth",
+              "reverseMeaning": "Jealousy, insecurity, self-doubt"
+            },
+            {
+              "image": "Original Deck/King-of-wands.jpg",
+              "name": "King of Wands",
+              "uprightMeaning": "Leadership, vision, charisma",
+              "reverseMeaning": "Arrogance, impulsiveness, poor leadership"
+            },          
+  
+  {
+    "image": "Original Deck/Ace-of-cups.jpg",
+    "name": "Ace of Cups",
+    "uprightMeaning": "Love, new feelings, compassion",
+    "reverseMeaning": "Repressed emotions, self-love, disconnection"
+  },
+  {
+    "image": "Original Deck/2-of-cups.jpg",
+    "name": "Two of Cups",
+    "uprightMeaning": "Union, attraction, connection",
+    "reverseMeaning": "Disharmony, breakups, imbalance"
+  },
+  {
+    "image": "Original Deck/3-of-cups.jpg",
+    "name": "Three of Cups",
+    "uprightMeaning": "Friendship, celebration, community",
+    "reverseMeaning": "Isolation, overindulgence, lack of support"
+  },
+  {
+    "image": "Original Deck/4-of-cups.jpg",
+    "name": "Four of Cups",
+    "uprightMeaning": "Meditation, apathy, reevaluation",
+    "reverseMeaning": "Boredom, dissatisfaction, awareness"
+  },
+  {
+    "image": "Original Deck/5-of-cups.jpg",
+    "name": "Five of Cups",
+    "uprightMeaning": "Loss, grief, disappointment",
+    "reverseMeaning": "Moving on, acceptance, forgiveness"
+  },
+  {
+    "image": "Original Deck/6-of-cups.jpg",
+    "name": "Six of Cups",
+    "uprightMeaning": "Nostalgia, childhood, memories",
+    "reverseMeaning": "Stuck in the past, emotional baggage, idealizing the past"
+  },
+  {
+    "image": "Original Deck/7-of-cups.jpg",
+    "name": "Seven of Cups",
+    "uprightMeaning": "Choices, fantasy, illusion",
+    "reverseMeaning": "Clarity, realism, disillusionment"
+  },
+  {
+    "image": "Original Deck/8-of-cups.jpg",
+    "name": "Eight of Cups",
+    "uprightMeaning": "Withdrawal, search, abandonment",
+    "reverseMeaning": "Stagnation, fear of change, avoidance"
+  },
+  {
+    "image": "Original Deck/9-of-cups.jpg",
+    "name": "Nine of Cups",
+    "uprightMeaning": "Contentment, satisfaction, wishes",
+    "reverseMeaning": "Unfulfilled desires, dissatisfaction, excess"
+  },
+  {
+    "image": "Original Deck/10-of-cups.jpg",
+    "name": "Ten of Cups",
+    "uprightMeaning": "Harmony, alignment, happiness",
+    "reverseMeaning": "Disharmony, family problems, broken relationships"
+  },
+  {
+    "image": "Original Deck/Page-of-cups.jpg",
+    "name": "Page of Cups",
+    "uprightMeaning": "Imagination, curiosity, sensitivity",
+    "reverseMeaning": "Emotional immaturity, blocked creativity, unrealistic expectations"
+  },
+  {
+    "image": "Original Deck/Knight-of-cups.jpg",
+    "name": "Knight of Cups",
+    "uprightMeaning": "Romance, charm, idealism",
+    "reverseMeaning": "Moodiness, unrealistic dreams, emotional instability"
+  },
+  {
+    "image": "Original Deck/Queen-of-cups.jpg",
+    "name": "Queen of Cups",
+    "uprightMeaning": "Compassion, calm, empathy",
+    "reverseMeaning": "Emotional manipulation, insecurity, withdrawn"
+  },
+  {
+    "image": "Original Deck/King-of-cups.jpg",
+    "name": "King of Cups",
+    "uprightMeaning": "Emotional balance, generosity, control",
+    "reverseMeaning": "Emotional repression, manipulation, moodiness"
+  },
+  
+
+    {
+      "image": "Original Deck/Ace-of-swords.jpg",
+      "name": "Ace of Swords",
+      "uprightMeaning": "Truth, clarity, breakthroughs",
+      "reverseMeaning": "Confusion, lack of clarity, dishonesty"
+    },
+    {
+      "image": "Original Deck/2-of-swords.jpg",
+      "name": "Two of Swords",
+      "uprightMeaning": "Difficult choices, confusion",
+      "reverseMeaning": "Indecision, blocked emotions, avoidance"
+    },
+    {
+      "image": "Original Deck/3-of-swords.jpg",
+      "name": "Three of Swords",
+      "uprightMeaning": "Heartbreak, sorrow, grief",
+      "reverseMeaning": "Healing, moving on, emotional recovery"
+    },
+    {
+      "image": "Original Deck/4-of-swords.jpg",
+      "name": "Four of Swords",
+      "uprightMeaning": "Rest, recovery, contemplation",
+      "reverseMeaning": "Burnout, restlessness, exhaustion"
+    },
+    {
+      "image": "Original Deck/5-of-swords.jpg",
+      "name": "Five of Swords",
+      "uprightMeaning": "Conflict, defeat, tension",
+      "reverseMeaning": "Resolution, reconciliation, retreat"
+    },
+    {
+      "image": "Original Deck/6-of-swords.jpg",
+      "name": "Six of Swords",
+      "uprightMeaning": "Transition, change, rite of passage",
+      "reverseMeaning": "Stagnation, resistance to change, unfinished business"
+    },
+    {
+      "image": "Original Deck/7-of-swords.jpg",
+      "name": "Seven of Swords",
+      "uprightMeaning": "Deception, strategy, betrayal",
+      "reverseMeaning": "Confession, coming clean, honesty"
+    },
+    {
+      "image": "Original Deck/8-of-swords.jpg",
+      "name": "Eight of Swords",
+      "uprightMeaning": "Imprisonment, restriction, fear",
+      "reverseMeaning": "Liberation, release, overcoming fear"
+    },
+    {
+      "image": "Original Deck/9-of-swords.jpg",
+      "name": "Nine of Swords",
+      "uprightMeaning": "Anxiety, nightmares, worry",
+      "reverseMeaning": "Overcoming fear, recovery, hope"
+    },
+    {
+      "image": "Original Deck/10-of-swords.jpg",
+      "name": "Ten of Swords",
+      "uprightMeaning": "Betrayal, crisis, painful endings",
+      "reverseMeaning": "Recovery, regeneration, new beginnings"
+    },
+    {
+      "image": "Original Deck/Page-of-swords.jpg",
+      "name": "Page of Swords",
+      "uprightMeaning": "Curiosity, intelligence, observation",
+      "reverseMeaning": "Deception, spying, miscommunication"
+    },
+    {
+      "image": "Original Deck/Knight-of-swords.jpg",
+      "name": "Knight of Swords",
+      "uprightMeaning": "Action, ambition, determination",
+      "reverseMeaning": "Impulsiveness, hastiness, aggression"
+    },
+    {
+      "image": "Original Deck/Queen-of-swords.jpg",
+      "name": "Queen of Swords",
+      "uprightMeaning": "Perception, clear thinking, independence",
+      "reverseMeaning": "Coldness, manipulation, bitterness"
+    },
+    {
+      "image": "Original Deck/King-of-swords.jpg",
+      "name": "King of Swords",
+      "uprightMeaning": "Intellectual authority, truth, justice",
+      "reverseMeaning": "Abuse of power, manipulation, lack of ethics"
+    },  
+  
+        {
+          "image": "Original Deck/Ace-of-pentacles.jpg",
+          "name": "Ace of Pentacles",
+          "uprightMeaning": "New financial beginnings, manifestation",
+          "reverseMeaning": "Financial setbacks, missed opportunities, lack of growth"
+        },
+        {
+          "image": "Original Deck/2-of-pentacles.jpg",
+          "name": "Two of Pentacles",
+          "uprightMeaning": "Balance, adaptability, time management",
+          "reverseMeaning": "Imbalance, lack of priorities, financial instability"
+        },
+        {
+          "image": "Original Deck/3-of-pentacles.jpg",
+          "name": "Three of Pentacles",
+          "uprightMeaning": "Collaboration, skill, craftsmanship",
+          "reverseMeaning": "Lack of teamwork, poor quality, inefficiency"
+        },
+        {
+          "image": "Original Deck/4-of-pentacles.jpg",
+          "name": "Four of Pentacles",
+          "uprightMeaning": "Security, control, possession",
+          "reverseMeaning": "Greed, possessiveness, fear of loss"
+        },
+        {
+          "image": "Original Deck/5-of-pentacles.jpg",
+          "name": "Five of Pentacles",
+          "uprightMeaning": "Loss, poverty, hard times",
+          "reverseMeaning": "Recovery, hope, improving financial situation"
+        },
+        {
+          "image": "Original Deck/6-of-pentacles.jpg",
+          "name": "Six of Pentacles",
+          "uprightMeaning": "Generosity, charity, balance",
+          "reverseMeaning": "Unfair distribution, exploitation, lack of charity"
+        },
+        {
+          "image": "Original Deck/7-of-pentacles.jpg",
+          "name": "Seven of Pentacles",
+          "uprightMeaning": "Patience, evaluation, long-term growth",
+          "reverseMeaning": "Impatience, lack of progress, poor investments"
+        },
+        {
+          "image": "Original Deck/8-of-pentacles.jpg",
+          "name": "Eight of Pentacles",
+          "uprightMeaning": "Dedication, skill, mastery",
+          "reverseMeaning": "Lack of focus, poor work quality, loss of motivation"
+        },
+        {
+          "image": "Original Deck/9-of-pentacles.jpg",
+          "name": "Nine of Pentacles",
+          "uprightMeaning": "Abundance, self-sufficiency, luxury",
+          "reverseMeaning": "Financial dependence, overspending, lack of independence"
+        },
+        {
+          "image": "Original Deck/10-of-pentacles.jpg",
+          "name": "Ten of Pentacles",
+          "uprightMeaning": "Wealth, family, legacy",
+          "reverseMeaning": "Financial loss, instability, family disputes"
+        },
+        {
+          "image": "Original Deck/Page-of-pentacles.jpg",
+          "name": "Page of Pentacles",
+          "uprightMeaning": "Ambition, opportunity, manifestation",
+          "reverseMeaning": "Lack of focus, missed opportunities, lack of ambition"
+        },
+        {
+          "image": "Original Deck/Knight-of-pentacles.jpg",
+          "name": "Knight of Pentacles",
+          "uprightMeaning": "Responsibility, patience, reliability",
+          "reverseMeaning": "Stagnation, laziness, lack of drive"
+        },
+        {
+          "image": "Original Deck/Queen-of-pentacles.jpg",
+          "name": "Queen of Pentacles",
+          "uprightMeaning": "Practicality, nurturing, stability",
+          "reverseMeaning": "Overprotectiveness, materialism, neglect of self"
+        },
+        {
+          "image": "Original Deck/King-of-pentacles.jpg",
+          "name": "King of Pentacles",
+          "uprightMeaning": "Wealth, success, security",
+          "reverseMeaning": "Financial irresponsibility, greed, lack of vision"
+        }
+  ]
+  
