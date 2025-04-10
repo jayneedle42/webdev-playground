@@ -11,8 +11,12 @@ I am building a website to practice HTML, CSS, and Javascript. This website is a
 - Social Media Sticky
 - Hover and Flip Card Animation
 - Custom "Bang" Revolver Cursor (Because it's fun!)
-- Pixel Art Canvas Web App
+- [Pixel Paint Web App](https://webdev-playground.onrender.com/pixelart.html)
+- [E-Tarot Card Reading Web App](https://webdev-playground.onrender.com/tarotdeck.html)
 
 **PLEASE NOTE THIS IS A WORK IN PROGRESS**
 
 More updates coming soon....
+- Fix Pixel Paint width on mobile (slightly too large)
+- Remove custom cursor on mobile
+- Fix scrolling inside a flipped food card on mobile
