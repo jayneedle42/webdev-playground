@@ -103,7 +103,7 @@
     </div>
   </header>
 <div class="test">
-  <h1>Tarot Reading</h1>
+  <h1>E-Tarot Reading</h1>
   <p><b>Instructions:</b> Shuffle the cards. Then draw 3 cards.</p>
   <br>
   <button id="shuffle-btn">SHUFFLE CARDS</button>
@@ -248,31 +248,28 @@ if (customCursor) {
       }
 
       shuffleButton.addEventListener('click', () => {
-        if (shuffleButton.textContent === 'SHUFFLE CARDS') {
-          // Spin animation
-          deckImg.classList.add('rotate-y');
-          setTimeout(() => deckImg.classList.remove('rotate-y'), 600);
+    if (shuffleButton.textContent === 'SHUFFLE CARDS' || shuffleButton.textContent === 'SHUFFLE DECK') {
+        // Spin animation
+        deckImg.classList.add('rotate-y');
+        setTimeout(() => deckImg.classList.remove('rotate-y'), 600);
 
-          getRandomCards();
-          resetGame();
-          shuffleButton.textContent = 'DRAW A CARD';
+        getRandomCards();
+        resetGame();
+        shuffleButton.textContent = 'DRAW A CARD';
 
-        } else if (shuffleButton.textContent === 'DRAW A CARD') {
-          drawCard(0);
-          shuffleButton.textContent = 'DRAW A CARD 2';
+    } else if (shuffleButton.textContent === 'DRAW A CARD') {
+        drawCard(0);
+        shuffleButton.textContent = 'DRAW A CARD 2';
 
-        } else if (shuffleButton.textContent === 'DRAW A CARD 2') {
-          drawCard(1);
-          shuffleButton.textContent = 'DRAW A CARD 3';
+    } else if (shuffleButton.textContent === 'DRAW A CARD 2') {
+        drawCard(1);
+        shuffleButton.textContent = 'DRAW A CARD 3';
 
-        } else if (shuffleButton.textContent === 'DRAW A CARD 3') {
-          drawCard(2);
-          shuffleButton.textContent = 'SHUFFLE DECK';
-
-        } else if (shuffleButton.textContent === 'SHUFFLE DECK') {
-          resetGame();
-        }
-      });
+    } else if (shuffleButton.textContent === 'DRAW A CARD 3') {
+        drawCard(2);
+        shuffleButton.textContent = 'SHUFFLE DECK';
+    }
+});
 
       // Social button functionality
       if (socialButton && socialIcons) {
